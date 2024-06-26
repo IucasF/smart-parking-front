@@ -1,0 +1,24 @@
+.imagemEstacionamento{
+    max-height: 75px;
+}
+.vagas {
+    display: inline-block;
+}
+.containerInfo{
+    margin-bottom: 5rem;
+    display: flex;
+    padding: 0% 20%;
+}
+
+.estacionamentoImagem {
+    width: 60%;
+}
+
+.estacionamentoInfo {
+    width: 40%;
+    font-size: 1.25rem;
+}
+
+.infoText {
+    text-align: justify;
+}

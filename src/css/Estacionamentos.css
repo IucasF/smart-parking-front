@@ -1,0 +1,51 @@
+.cardEstacionamento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+.container {
+    padding: 0% 25%;
+    justify-content: center;
+}
+
+.normal {
+    font-weight: bold;
+    color: darkorange;
+}
+
+.cheio {
+    font-weight: bold;
+    color: darkred;
+}
+
+.vazio {
+    font-weight: bold;
+    color: green;
+}
+
+.cardEstacionamento {
+    border: solid 2px;
+    border-color: #bababa;
+    border-radius: 100px;
+    padding: 1.25rem;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.cardEstacionamento:hover{
+    background-color: #f1f1f1;
+}
+.container{
+    margin-bottom: 3rem;
+    text-align: -webkit-center;
+}
+
+.cardEstacionamento {
+    max-width: 550px;
+}
+
+.nomeEstacionamento {
+    margin-right: 5rem;
+}

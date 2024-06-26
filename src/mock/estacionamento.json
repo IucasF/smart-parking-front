@@ -1,0 +1,10 @@
+{
+    "data":
+        {
+            "Id": 1,
+            "Nome":"Estacionamento Mock 1",
+            "Vagas_totais":40,
+            "Vagas_ocupadas":25,
+            "data_de_medicao":"2024-06-25T22:52:17.2697581Z"
+        }
+}
