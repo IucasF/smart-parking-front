@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/IucasF/smart-parking-front/static/css/main.787f706d.css",
+    "main.js": "/IucasF/smart-parking-front/static/js/main.298d197f.js",
+    "static/media/header-bg.jpg": "/IucasF/smart-parking-front/static/media/header-bg.f18faae167dfb99280b2.jpg",
+    "static/media/carro4.png": "/IucasF/smart-parking-front/static/media/carro4.3f444801176b2f1c7023.png",
+    "static/media/carro1.png": "/IucasF/smart-parking-front/static/media/carro1.f28f37d5aae676b5556e.png",
+    "static/media/carro3.png": "/IucasF/smart-parking-front/static/media/carro3.8a99ddccb0846bea53fa.png",
+    "static/media/carro2.png": "/IucasF/smart-parking-front/static/media/carro2.d5357fc38f74b131ff8d.png",
+    "static/media/carro5.png": "/IucasF/smart-parking-front/static/media/carro5.de10b8ca7bbbfbd76f12.png",
+    "static/media/carro6.png": "/IucasF/smart-parking-front/static/media/carro6.ebf40daeca2bc2008af3.png",
+    "static/media/carro7.png": "/IucasF/smart-parking-front/static/media/carro7.3f11bee68dff09f0d92b.png",
+    "static/media/carro9.png": "/IucasF/smart-parking-front/static/media/carro9.118bda2981cec2de1749.png",
+    "static/media/carro8.png": "/IucasF/smart-parking-front/static/media/carro8.5c543dd92668ba4e317f.png",
+    "static/media/unicampPreto.png": "/IucasF/smart-parking-front/static/media/unicampPreto.a4f442ac7af5b9b04cf5.png",
+    "static/media/Vaga_Vazia.jpg": "/IucasF/smart-parking-front/static/media/Vaga_Vazia.201d634a250b7d786614.jpg",
+    "static/media/smart-campus.png": "/IucasF/smart-parking-front/static/media/smart-campus.8782409af752505f3aaf.png",
+    "index.html": "/IucasF/smart-parking-front/index.html",
+    "main.787f706d.css.map": "/IucasF/smart-parking-front/static/css/main.787f706d.css.map",
+    "main.298d197f.js.map": "/IucasF/smart-parking-front/static/js/main.298d197f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.787f706d.css",
+    "static/js/main.298d197f.js"
+  ]
+}
