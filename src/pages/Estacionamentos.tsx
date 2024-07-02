@@ -1,49 +1,70 @@
-import React from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { IEstacionamento } from '../componnents/interfaces'
-import Header from '../componnents/header'
+import Header from '../componnents/header';
 import { getEstacionamentos } from '../componnents/Service'
 
 import '../css/Estacionamentos.css'
 import '../css/App.css'
 
-
-function Estacionamentos(){
+function Estacionamentos() {
     const navigate = useNavigate();
-    const [estacionamentos, setEstacionamentos] = useState<IEstacionamento[]>(getEstacionamentos());
+    const [estacionamentos, setEstacionamentos] = useState<IEstacionamento[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
-    // setEstacionamentos(getEstacionamentos());
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const data = await getEstacionamentos();
+                setEstacionamentos(data);
+            } catch (err) {
+                setError('Erro ao obter estacionamentos');
+            } finally {
+                setLoading(false);
+            }
+        }
+        fetchData();
+    }, []);
 
-    return(
-    <div>
-        <Header/>
-        <body>
+    if (loading) {
+        return <div>
+                    <Header />
+                    <div className='mensagemTela'>Carregando...</div>
+                </div>;
+    }
+
+    if (error) {
+        return <div>
+                    <Header />
+                    <div className='mensagemTela'>{error}</div>
+            </div>
+    }
+
+    return (
+        <div>
+            <Header />
             <div className='intro-heading'>
-                {/* <img src = {logoUnicamp} alt="logoUnicamp" className='logo-Unicamp'  /> */}
                 <div className='header-title'>Estacionamentos</div>
             </div>
             <div className='container'>
                 <div>
                     {(
                         estacionamentos?.map((item, index) => (
-                        <div className="cardEstacionamento" key={index} onClick={() => navigate('/estacionamento/' + item.id)}>
-                            <div className="nomeEstacionamento">
-                            {item?.desc}
+                            <div className="cardEstacionamento" key={index} onClick={() => navigate('/estacionamento/' + item.id)}>
+                                <div className="nomeEstacionamento">
+                                    {item?.desc}
+                                </div>
+                                <div className="vagas_totais">
+                                    Vagas: {item?.total_vagas.toString()}
+                                </div>
                             </div>
-                            {/* <div className={GetStatusColor(item?.Vagas_ocupadas,item?.Vagas_totais)}> */}
-                            <div className="vagas_totais">
-                                Vagas: {item?.total_vagas.toString()}
-                            </div>
-                        </div>
                         ))
                     )}
                 </div>
             </div>
-        {/* {estacionamentoMock.data[1].Nome} */}
             <div><button onClick={() => navigate('/')} className='home-button'>Voltar</button></div>
-        </body>
-    </div>
+        </div>
     );
 }
 
