@@ -76,7 +76,7 @@ function EstacionamentoInfo(){
     return(
     <div>
         <Header/>
-        <body>
+        <body> 
             <div className='intro-heading'>
                 {/* <img src = {logoUnicamp} alt="logoUnicamp" className='logo-Unicamp'  /> */}
                 <div className='header-title'>{estacionamento.desc}</div>
