@@ -1,25 +1,17 @@
-{
-    "data":[
-        {
-            "Id": 1,
-            "Nome":"Estacionamento Mock 1",
-            "Vagas_totais":40,
-            "Vagas_ocupadas":25,
-            "data_de_medicao":"2024-06-25T22:52:17.2697581Z"
-        },
-        {
-            "Id": 2,
-            "Nome":"Estacionamento Mock 2",
-            "Vagas_totais":80,
-            "Vagas_ocupadas":70,
-            "data_de_medicao":"2024-06-25T22:52:17.2697581Z"
-        },
-        {
-            "Id": 3,
-            "Nome":"Estacionamento Mock 3",
-            "Vagas_totais":30,
-            "Vagas_ocupadas":3,
-            "data_de_medicao":"2024-06-25T22:52:17.2697581Z"
-        }     
-    ]
-}
+[
+    {
+      "desc": "Estacionamento Centro",
+      "id": "1",
+      "total_vagas": 20
+    },
+    {
+        "desc": "Estacionamento Norte",
+        "id": "2",
+        "total_vagas": 70
+    },
+    {
+        "desc": "Estacionamento Sul",
+        "id": "3",
+        "total_vagas": 50
+    }
+]

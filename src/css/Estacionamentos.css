@@ -10,21 +10,6 @@
     justify-content: center;
 }
 
-.normal {
-    font-weight: bold;
-    color: darkorange;
-}
-
-.cheio {
-    font-weight: bold;
-    color: darkred;
-}
-
-.vazio {
-    font-weight: bold;
-    color: green;
-}
-
 .cardEstacionamento {
     border: solid 2px;
     border-color: #bababa;
@@ -48,4 +33,8 @@
 
 .nomeEstacionamento {
     margin-right: 5rem;
+}
+
+.vagas_totais {
+    padding-right: 25px;
 }

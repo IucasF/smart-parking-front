@@ -7,7 +7,7 @@
 .containerInfo{
     margin-bottom: 5rem;
     display: flex;
-    padding: 0% 20%;
+    padding: 0% 15%;
 }
 
 .estacionamentoImagem {
@@ -21,4 +21,27 @@
 
 .infoText {
     text-align: justify;
+}
+
+.normal, .cheio, .vazio, .vagasEstacionamentoInfo{
+    display: inline-block;
+}
+
+.vagasEstacionamentoInfo{
+    padding-right: 5px;
+}
+
+.normal {
+    font-weight: bold;
+    color: darkorange;
+}
+
+.cheio {
+    font-weight: bold;
+    color: darkred;
+}
+
+.vazio {
+    font-weight: bold;
+    color: green;
 }

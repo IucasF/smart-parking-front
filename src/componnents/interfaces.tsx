@@ -1,9 +1,14 @@
 type IEstacionamento = {
-    Id: number;
-    Nome: String;
-    Vagas_totais: number;
-    Vagas_ocupadas: number;
-    data_de_medicao: string;
+    id: string;
+    desc: string;
+    total_vagas: number;
 }
 
-export type {IEstacionamento}
+type IVagas = {
+    estacionamento_id: string;
+    timestamp_ack_server: string;
+    timestamp_local_coleta: string;
+    vagas_ocupadas: number;
+}
+
+export type {IEstacionamento, IVagas}

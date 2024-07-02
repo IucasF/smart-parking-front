@@ -1,13 +1,18 @@
 import estacionamentosMock from '../mock/estacionamentos.json'
 import estacionamentoMock from '../mock/estacionamento.json'
-import { IEstacionamento } from './interfaces';
+import vagasMock from '../mock/vagas.json'
+import { IEstacionamento, IVagas } from './interfaces';
 
 function getEstacionamentos() :IEstacionamento[] {
-    return estacionamentosMock.data;
+    return estacionamentosMock;
 }
 
-function getEstacionamentoByID(id:string|undefined){
-    return estacionamentoMock;
+function getEstacionamentoByID(id:string|undefined) :IEstacionamento{
+    return estacionamentoMock[0];
 }
 
-export {getEstacionamentos, getEstacionamentoByID}
+function getVagasByID(id:string|undefined) :IVagas{
+  return vagasMock;
+}
+
+export {getEstacionamentos, getEstacionamentoByID, getVagasByID}

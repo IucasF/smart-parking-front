@@ -8,18 +8,6 @@ import { getEstacionamentos } from '../componnents/Service'
 import '../css/Estacionamentos.css'
 import '../css/App.css'
 
-function GetStatusColor(vagasOcupadas: number, vagasTotais: number): string{
-    var ocupacao = (vagasOcupadas/vagasTotais)*100;
-    if (ocupacao > 75) {
-        return "cheio"
-    }
-    else if (ocupacao < 25){
-        return "vazio"
-    }
-    else{
-        return "normal"
-    }
-}
 
 function Estacionamentos(){
     const navigate = useNavigate();
@@ -39,12 +27,13 @@ function Estacionamentos(){
                 <div>
                     {(
                         estacionamentos?.map((item, index) => (
-                        <div className="cardEstacionamento" key={index} onClick={() => navigate('/estacionamento/' + item.Id)}>
+                        <div className="cardEstacionamento" key={index} onClick={() => navigate('/estacionamento/' + item.id)}>
                             <div className="nomeEstacionamento">
-                            {item?.Nome}
+                            {item?.desc}
                             </div>
-                            <div className={GetStatusColor(item?.Vagas_ocupadas,item?.Vagas_totais)}>
-                            {item?.Vagas_ocupadas.toString() + "/" + item?.Vagas_totais.toString()}
+                            {/* <div className={GetStatusColor(item?.Vagas_ocupadas,item?.Vagas_totais)}> */}
+                            <div className="vagas_totais">
+                                Vagas: {item?.total_vagas.toString()}
                             </div>
                         </div>
                         ))
