@@ -45,9 +45,9 @@ function EstacionamentoInfo(){
             try {
                 const estacionamentoData = await getEstacionamentoByID(id);
                 const vagasData = await getVagasByID(id);
-                setEstacionamento(estacionamentoData);
+                setEstacionamento(estacionamentoData[0]);
                 setVagas(vagasData);
-                setListaDeCarros(ListadeCarros(estacionamentoData, vagasData));
+                setListaDeCarros(ListadeCarros(estacionamentoData[0], vagasData));
             } catch (err) {
                 setError('Erro ao obter dados do estacionamento.');
             } finally {
